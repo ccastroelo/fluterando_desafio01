@@ -11,6 +11,31 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: AppStyle(isLite: false).highLightColor,
+        selectedLabelStyle: AppStyle(isLite: false).bottomBarStyle,
+        backgroundColor: AppStyle(isLite: false).backGroundColor,
+        unselectedLabelStyle: AppStyle(isLite: false).bottomBarStyle,
+        unselectedItemColor: AppStyle(isLite: false).highLightColor,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.bullseye),
+            label: 'Atividades',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.github),
+            label: 'Repositórios',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
+            ),
+            label: 'Sobre o Dev',
+          ),
+        ],
+        currentIndex: 1,
+        onTap: (value) {},
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 13, 0),
         child: Column(
@@ -98,9 +123,12 @@ class OptionCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
+        decoration: BoxDecoration(
+            color: AppStyle(isLite: false).cardColor,
+            border: Border.all(color: AppStyle(isLite: false).cardColor),
+            borderRadius: const BorderRadius.all(Radius.circular(20))),
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
         height: 220,
-        color: AppStyle(isLite: false).cardColor,
         child: Column(
           children: [
             Row(
@@ -151,12 +179,24 @@ class OptionCard extends StatelessWidget {
                   style: AppStyle(isLite: false).descriptionStyle,
                 ),
                 Spacer(),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Ver mais',
-                      style: AppStyle(isLite: false).moreStyle,
-                    ))
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: AppStyle(isLite: false).primaryColor,
+                          border: Border.all(
+                              color: AppStyle(isLite: false).primaryColor),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20))),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 6, horizontal: 18),
+                        child: Text(
+                          'Ver mais',
+                          style: AppStyle(isLite: false).moreStyle,
+                        ),
+                      )),
+                )
               ],
             ),
           ],

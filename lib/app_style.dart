@@ -14,6 +14,7 @@ class AppStyle {
   late TextStyle descriptionStyle;
   late TextStyle exerciseStyle;
   late TextStyle moreStyle;
+  late TextStyle bottomBarStyle;
 
   Color primaryColorDark = const Color(0xFF055aa3);
   Color highLightColorDark = const Color(0xFFEDF4F8);
@@ -52,24 +53,17 @@ class AppStyle {
         fontWeight: FontWeight.w400,
         color: highLightColor);
     headLine2Style = GoogleFonts.poppins(
-        height: 1,
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-        color: highLightColor);
+        fontSize: 16, fontWeight: FontWeight.w400, color: highLightColor);
     bodyTextStyle = GoogleFonts.montserrat(
-        height: 1,
-        fontSize: 14,
-        fontWeight: FontWeight.normal,
-        color: descriptionColor);
+        fontSize: 14, fontWeight: FontWeight.normal, color: descriptionColor);
     descriptionStyle = GoogleFonts.montserrat(
         height: 1,
         fontSize: 12,
         fontWeight: FontWeight.normal,
         color: highLightColor);
     exerciseStyle = GoogleFonts.montserrat(
-        height: 1,
-        fontSize: 12,
-        fontWeight: FontWeight.normal,
-        color: descriptionColor);
+        fontSize: 12, fontWeight: FontWeight.normal, color: descriptionColor);
+    bottomBarStyle = GoogleFonts.poppins(
+        fontSize: 11, fontWeight: FontWeight.normal, color: highLightColor);
   }
 }

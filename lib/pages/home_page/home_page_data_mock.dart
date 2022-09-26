@@ -18,7 +18,7 @@ class HomePageDataMock {
           "Aplicação da técnica de leitura de mocukp, contendo 2 exercícios",
     },
     {
-      "icon": Icons.toys,
+      "icon": FontAwesomeIcons.fan,
       "title": "Playground",
       "exercise": 3,
       "description": "Ambiente reservado a testes e estudos em geral",
